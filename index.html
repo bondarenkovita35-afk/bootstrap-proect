@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beauty Salon — Premium Glow</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-cosmos">
+    <!-- Background canvas (stars) -->
+    <canvas id="stars"></canvas>
+
+    <!-- Top glow -->
+    <div class="top-aura"></div>
+
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-glass">
+        <div class="container py-2">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <span class="brand-mark"></span>
+                <span class="brand-text">PlumRose Atelier</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto gap-lg-2">
+                    <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#prices">Цены</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Галерея</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Команда</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#booking">Запись</a></li>
+                </ul>
+
+                <div class="ms-lg-3 mt-3 mt-lg-0 d-grid d-lg-block">
+                    <a class="btn btn-gold" href="#booking">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-section">
+        <div class="container position-relative">
+            <div class="row align-items-center g-4 py-5">
+                <div class="col-lg-6">
+                    <p class="badge badge-glow mb-3">Premium Beauty • Gold Glow • Plum Rose</p>
+                    <h1 class="hero-title mb-3">
+                        Салон красоты <span class="text-gold">премиум</span> уровня<br />
+                        с эффектом <span class="text-ice">холодного сияния</span>
+                    </h1>
+                    <p class="hero-sub mb-4">
+                        Деликатный сервис, эстетика, точность. Дизайн и атмосфера — как бренд.
+                        Удобная запись, быстрый выбор услуг, идеальная структура.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <a class="btn btn-gold btn-lg" href="#booking">Записаться онлайн</a>
+                        <a class="btn btn-outline-ice btn-lg" href="#services">Смотреть услуги</a>
+                    </div>
+
+                    <div class="hero-metrics mt-4">
+                        <div class="metric">
+                            <div class="metric-num">4.9★</div>
+                            <div class="metric-text">средняя оценка</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-num">60+</div>
+                            <div class="metric-text">процедур</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-num">24/7</div>
+                            <div class="metric-text">онлайн-запись</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="hero-card glass-card gold-ring">
+                        <div class="hero-card-inner">
+                            <div class="hero-image"></div>
+
+                            <div class="p-4 p-md-5">
+                                <h2 class="h4 title-serif mb-2">Визуальная эстетика + удобство</h2>
+                                <p class="mb-4 text-soft">
+                                    Сайт сделан на Bootstrap (сетку и компоненты) + авторский дизайн:
+                                    космический фон, золотая подсветка карточек, плавные анимации.
+                                </p>
+
+                                <div class="row g-3">
+                                    <div class="col-6">
+                                        <div class="mini-card">
+                                            <div class="mini-ico"></div>
+                                            <div class="mini-title">Glow UI</div>
+                                            <div class="mini-text">подсветка вокруг</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mini-card">
+                                            <div class="mini-ico ice"></div>
+                                            <div class="mini-title">Fast</div>
+                                            <div class="mini-text">быстрая загрузка</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mini-card">
+                                            <div class="mini-ico gold"></div>
+                                            <div class="mini-title">Premium</div>
+                                            <div class="mini-text">дорогой стиль</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="mini-card">
+                                            <div class="mini-ico plum"></div>
+                                            <div class="mini-title">Brand</div>
+                                            <div class="mini-text">уникальный тон</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 d-flex gap-2 flex-wrap">
+                                    <a class="btn btn-gold" href="#prices">Прайс</a>
+                                    <a class="btn btn-outline-ice" href="#gallery">Галерея</a>
+                                    <a class="btn btn-outline-soft" href="#team">Мастера</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="orbit orbit-1"></div>
+                    <div class="orbit orbit-2"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-pad">
+        <div class="container">
+            <div class="section-head text-center mb-4">
+                <h2 class="title-serif">Услуги</h2>
+                <p class="text-soft">Сетка Bootstrap + авторские карточки с золотой подсветкой.</p>
+            </div>
+
+            <div class="row g-3 g-lg-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card glow-card">
+                        <div class="svc-ico gold"></div>
+                        <h3 class="h5 mt-3">Hair & Styling</h3>
+                        <p class="text-soft mb-4">Окрашивание, тонирование, уход, укладки. Чёткая структура и результат.
+                        </p>
+                        <a class="link-glow" href="#booking">Записаться →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card glow-card">
+                        <div class="svc-ico ice"></div>
+                        <h3 class="h5 mt-3">Nails</h3>
+                        <p class="text-soft mb-4">Маникюр, педикюр, укрепление. Аккуратность, чистота, детали.</p>
+                        <a class="link-glow" href="#booking">Записаться →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card glow-card">
+                        <div class="svc-ico plum"></div>
+                        <h3 class="h5 mt-3">Makeup</h3>
+                        <p class="text-soft mb-4">Дневной, вечерний, свадебный. Премиальная подача и естественность.</p>
+                        <a class="link-glow" href="#booking">Записаться →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card glow-card">
+                        <div class="svc-ico rose"></div>
+                        <h3 class="h5 mt-3">Brows & Lashes</h3>
+                        <p class="text-soft mb-4">Ламинирование, коррекция, окрашивание. Форма и гармония.</p>
+                        <a class="link-glow" href="#booking">Записаться →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card glow-card">
+                        <div class="svc-ico gold"></div>
+                        <h3 class="h5 mt-3">Skincare</h3>
+                        <p class="text-soft mb-4">Уходовые процедуры, сияние кожи, расслабление.</p>
+                        <a class="link-glow" href="#booking">Записаться →</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card glow-card">
+                        <div class="svc-ico ice"></div>
+                        <h3 class="h5 mt-3">VIP Packages</h3>
+                        <p class="text-soft mb-4">Комплексные пакеты “под событие”. Максимум эффекта за 1 визит.</p>
+                        <a class="link-glow" href="#prices">Смотреть цены →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICES -->
+    <section id="prices" class="section-pad section-alt">
+        <div class="container">
+            <div class="section-head text-center mb-4">
+                <h2 class="title-serif">Цены</h2>
+                <p class="text-soft">Пример цен. Подставишь реальные — структура уже готова.</p>
+            </div>
+
+            <div class="row g-3 g-lg-4 align-items-stretch">
+                <div class="col-lg-4">
+                    <div class="price-card glass-card">
+                        <div class="price-tag">Essential</div>
+                        <div class="price-amount">699 kr</div>
+                        <div class="text-soft mb-4">Быстрая процедура, чистый результат.</div>
+                        <ul class="list-unstyled text-soft mb-4">
+                            <li>• Консультация</li>
+                            <li>• 1 услуга</li>
+                            <li>• Уход</li>
+                        </ul>
+                        <a class="btn btn-outline-ice w-100" href="#booking">Выбрать</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="price-card glass-card gold-ring">
+                        <div class="price-tag">Signature</div>
+                        <div class="price-amount text-gold">1299 kr</div>
+                        <div class="text-soft mb-4">Лучший баланс: эффект + комфорт.</div>
+                        <ul class="list-unstyled text-soft mb-4">
+                            <li>• Консультация</li>
+                            <li>• 2 услуги</li>
+                            <li>• Уход + стайлинг</li>
+                        </ul>
+                        <a class="btn btn-gold w-100" href="#booking">Выбрать</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="price-card glass-card">
+                        <div class="price-tag">VIP Glow</div>
+                        <div class="price-amount">2499 kr</div>
+                        <div class="text-soft mb-4">Премиум пакет “под событие”.</div>
+                        <ul class="list-unstyled text-soft mb-4">
+                            <li>• Персональный мастер</li>
+                            <li>• 3–4 услуги</li>
+                            <li>• Фото-ready результат</li>
+                        </ul>
+                        <a class="btn btn-outline-ice w-100" href="#booking">Выбрать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section-pad">
+        <div class="container">
+            <div class="section-head text-center mb-4">
+                <h2 class="title-serif">Галерея</h2>
+                <p class="text-soft">Поставь свои фото. Сейчас — стильные “плейсхолдеры”.</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-6 col-lg-3">
+                    <div class="gallery-tile t1 glow-card"></div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="gallery-tile t2 glow-card"></div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="gallery-tile t3 glow-card"></div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="gallery-tile t4 glow-card"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM -->
+    <section id="team" class="section-pad section-alt">
+        <div class="container">
+            <div class="section-head text-center mb-4">
+                <h2 class="title-serif">Команда</h2>
+                <p class="text-soft">Мини-профили мастеров. Можно расширить до отдельной страницы.</p>
+            </div>
+
+            <div class="row g-3 g-lg-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="team-card glow-card">
+                        <div class="avatar a1"></div>
+                        <div class="mt-3">
+                            <div class="h5 mb-1">Elena</div>
+                            <div class="text-soft small">Hair Stylist</div>
+                            <div class="chip-row mt-3">
+                                <span class="chip">Color</span>
+                                <span class="chip">Care</span>
+                                <span class="chip">Styling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="team-card glow-card">
+                        <div class="avatar a2"></div>
+                        <div class="mt-3">
+                            <div class="h5 mb-1">Mila</div>
+                            <div class="text-soft small">Nail Master</div>
+                            <div class="chip-row mt-3">
+                                <span class="chip">Manicure</span>
+                                <span class="chip">Gel</span>
+                                <span class="chip">Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="team-card glow-card">
+                        <div class="avatar a3"></div>
+                        <div class="mt-3">
+                            <div class="h5 mb-1">Sofia</div>
+                            <div class="text-soft small">Brows & Lashes</div>
+                            <div class="chip-row mt-3">
+                                <span class="chip">Brows</span>
+                                <span class="chip">Lashes</span>
+                                <span class="chip">Shape</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section id="booking" class="section-pad">
+        <div class="container">
+            <div class="section-head text-center mb-4">
+                <h2 class="title-serif">Запись онлайн</h2>
+                <p class="text-soft">Форма-плейсхолдер. Потом можно подключить email/CRM/Calendly.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-md-5 gold-ring">
+                        <form id="bookingForm" class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-soft">Имя</label>
+                                <input class="form-control form-control-glow" type="text" name="name" required
+                                    placeholder="Ваше имя">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label text-soft">Телефон / Email</label>
+                                <input class="form-control form-control-glow" type="text" name="contact" required
+                                    placeholder="+46 ... / email">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-soft">Услуга</label>
+                                <select class="form-select form-control-glow" name="service" required>
+                                    <option value="">Выберите услугу</option>
+                                    <option>Hair & Styling</option>
+                                    <option>Nails</option>
+                                    <option>Makeup</option>
+                                    <option>Brows & Lashes</option>
+                                    <option>Skincare</option>
+                                    <option>VIP Packages</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-soft">Дата</label>
+                                <input class="form-control form-control-glow" type="date" name="date" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label text-soft">Комментарий</label>
+                                <textarea class="form-control form-control-glow" rows="4" name="message"
+                                    placeholder="Пожелания, удобное время..."></textarea>
+                            </div>
+
+                            <div class="col-12 d-grid d-md-flex gap-2">
+                                <button class="btn btn-gold btn-lg" type="submit">Отправить заявку</button>
+                                <a class="btn btn-outline-ice btn-lg" href="#services">Я ещё выбираю услуги</a>
+                            </div>
+
+                            <div class="col-12">
+                                <div id="formStatus" class="text-soft small mt-2"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <p class="text-center text-soft small mt-3">
+                        *Демо-форма: сейчас показывает сообщение на странице. Подключим отправку на email по твоему
+                        желанию.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-pad">
+        <div class="container">
+            <div class="row g-3 align-items-center">
+                <div class="col-md-6">
+                    <div class="d-flex align-items-center gap-2">
+                        <span class="brand-mark"></span>
+                        <div>
+                            <div class="fw-semibold">PlumRose Atelier</div>
+                            <div class="text-soft small">Stockholm • Premium Beauty Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 text-md-end">
+                    <a class="footer-link" href="#booking">Запись</a>
+                    <span class="sep">•</span>
+                    <a class="footer-link" href="#prices">Цены</a>
+                    <span class="sep">•</span>
+                    <a class="footer-link" href="#services">Услуги</a>
+                </div>
+            </div>
+
+            <div class="hr-glow my-4"></div>
+            <div class="text-center text-soft small">
+                © <span id="year"></span> PlumRose Atelier — Bootstrap + Custom Premium Design
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="main.js"></script>
+</body>
+
+</html>
